@@ -29,9 +29,9 @@ function submit() {
 
 document.getElementById("submitBtn").addEventListener("click", submit);
 
-function price() {
+function price(room, nights, breakfast) {
   let priceRoom;
-  
+ 
 
   if (room === "Chambre 1 personne") {
     priceRoom = 65;
@@ -40,21 +40,26 @@ function price() {
   } else if (room === "Chambre 4 personnes") {
     priceRoom = 139;
   } else if (room === "Loft") {
-    priceRoom === 189;
+    priceRoom = 189;
   } else alert("Erreur dans le calcul du prix de la chambre")
 
-  let totalPrice;
   let priceBreakfast;
 
-  if (breakfast = "oui") {
-    priceBreakfast = 7 * nights;
-    
-    totalPrice = priceBreakfast + (nights * priceRoom)
-  } else if (breakfast = "non") {
-    totalPrice = nights * priceRoom
-  }
+if (breakfast) {
 
-  console.log(totalPrice);
+  priceBreakfast = 7 * nights;
+} else {
+
+  priceBreakfast = 0;
+}
+
+  console.log("Prix chambre :", priceRoom);
+  console.log("Prix petit-déjeuner :", priceBreakfast);
+
+
+  return priceBreakfast + (nights * priceRoom);
+
+
 }
 
 //--------------------------------//
@@ -65,24 +70,25 @@ function search() {
   let searchlastname = document.getElementById("searchlastname").value;
   let searchfirstname = document.getElementById("searchfirstname").value;
 
-  let foundId = reservationList.find(element =>  {
+  let foundReservation = reservationList.find(element =>  {
     return (
       element.lastname === searchlastname &&
       element.firstname === searchfirstname
       );
     ;
   })
-
-  if (foundId) {
-    let foundReservation = reservationList.find(element => element.id === foundId.id);
-      console.log("Réservation trouvée", foundReservation);
-
+  if (foundReservation) {
+    let totalPrice = price(foundReservation.room, foundReservation.nights, foundReservation.breakfast);
+    alert("Le client : " + foundReservation.firstname + " " + foundReservation.lastname + " doit régler la somme de : " + totalPrice + "euros.");
+    console.log("Réservation trouvée", foundReservation);
   } else {
     console.log("Aucune réservation trouvée pour le client :", searchlastname, searchfirstname);
   }
 }
 
-document.getElementById("Rechercher").addEventListener("click", search, price);
+document.getElementById("Rechercher").addEventListener("click", search);
+
+
 
 
 
