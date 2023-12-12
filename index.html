@@ -16,10 +16,10 @@
 
     <main>
         <form action="" method="POST">
-            <label for="firstname">Prénom</label>
+            <label for="firstname">Prénom</label> <br>
             <input type="text" name="firstname" id="firstname">
 
-            <label for="lastname">Nom</label>
+            <label for="lastname">Nom</label> <br>
             <input type="text" name="lastname" id="lastname">
 
             <label for="nights">Nombre de nuits</label>
@@ -30,6 +30,7 @@
                 <option value="room1">Chambre 1 personne</option>
                 <option value="room2">Chambre 2 personnes</option>
                 <option value="room3">Chambre 4 personnes</option>
+                <option value="room4">Loft</option>
             </select>
 
 
@@ -41,6 +42,20 @@
 
 
             <button id="submitBtn" type="button">Enregistrer le client</button>
+        </form>
+
+
+
+
+
+        <form action="" method="POST">
+            <label for="searchfirstname">Prénom</label> <br>
+            <input type="text" name="searchfirstname" id="searchfirstname">
+
+            <label for="searchlastname">Nom</label> <br>
+            <input type="text" name="searchlastname" id="searchlastname">
+
+            <button id="Rechercher" type="button">Rechercher</button>
         </form>
     </main>
 
