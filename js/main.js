@@ -14,12 +14,12 @@ function submit() {
     room: room,
     breakfast: breakfast,
   };
-
   reservationList.push(reservation);
   
   console.log(reservation);
 }
 
+document.getElementById("submitBtn").addEventListener("click", submit);
 //booking.addEventListener("click", function () {
 //  submit();
 //
