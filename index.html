@@ -1,70 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
         <nav>
-
+            <div class="border">
+                <div>
+                    <img class="image" src="img/Logoblanc.png" />
+                </div>
+                <div class="element">
+                    <ul>
+                        <li>
+                            <a class="btn-new" href="">nouveau client</a>
+                        </li>
+                        <li>
+                            <a class="btn-depart" href="">départ client</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
+      <div class="background">
+        <img class="background" src="img/Lille-Seminaires.jpg" alt="mon image" />
+        <div>
+            <p class="texte-superpose">Accueil nouveau client </p> 
+            <hr>
+        </div>
+      </div>
     </header>
 
-
-
     <main>
-        <form action="" method="POST">
-            <label for="firstname">Prénom</label> <br>
-            <input type="text" name="firstname" id="firstname">
+      <div class="formApparence">
+        <form class="form" action="" method="POST">
+          <div>
+            <label class="label" for="firstname">Prénom</label> <br />
+            <input
+              class="article"
+              type="text"
+              name="firstname"
+              id="firstname"
+            />
+          </div>
 
-            <label for="lastname">Nom</label> <br>
-            <input type="text" name="lastname" id="lastname">
+          <div>
+            <label class="label" for="lastname">Nom</label> <br />
+            <input class="article" type="text" name="lastname" id="lastname" />
+          </div>
 
-            <label for="nights">Nombre de nuits</label>
-            <input type="number" name="nights" id="nights"  min="0" >
+          <div>
+            <label class="label" for="nights">Nombre de nuits</label> <br>
+            <input class="article" type="number" name="nights"
+              id="nights"
+              min="0"
+            />
+          </div>
 
-            <label for="room">Chambre</label>
-            <select name="room" id="room">
+          <div>
+            <label class="label" for="room">Chambre</label> <br>
+            <select class="article" name="room" id="room">
                 <option value="Chambre 1 personne">Chambre 1 personne</option>
                 <option value="Chambre 2 personnes">Chambre 2 personnes</option>
                 <option value="Chambre 4 personnes">Chambre 4 personnes</option>
                 <option value="Loft">Loft</option>
             </select>
+          </div>
 
-
-            <p>Petit déjeuner ?</p>
-            <input type="radio" id="breakfast" name="breakfast" value="oui">
+          <div>
+            <p class="label">Petit déjeuner ?</p>
+            <input type="radio" id="breakfast" name="breakfast"  value="oui" />
             <label for="oui"> Oui</label>
-            <input type="radio" id="breakfast" name="breakfast" value="non">
+
+            <input type="radio" id="breakfast" name="breakfast" value="non" />
             <label for="non"> Non</label>
 
+          </div>
 
-            <button id="submitBtn" type="button">Enregistrer le client</button>
+          <button class="btn" id="submitBtn" type="button">
+            Enregistrer le client
+          </button>
         </form>
+            </div>
+
+            <img class="background" src="img/Lille-Hall.jpg" alt="" />
+            <div class="test">
+                <p class="texte-superpose2">Départ client</p>
+            </div>
 
 
+            <div class="formApparence" method="POST">
+                <form class="form1" action="" method="POST">
+                <div>
+                <label class="label" for="searchfirstname">Prénom</label> <br />
+                <input
+                    class="article"
+                    type="text"
+                    name="searchfirstname"
+                    id="searchfirstname"
+                />
+                </div>
+
+                <div>
+                <label class="label" for="searchlastname">Nom</label> <br />
+                <input
+                    class="article"
+                    type="text"
+                    name="searchlastname"
+                    id="searchlastname"
+                />
+                </div>
+
+                <button class="btn2" id="Rechercher" type="button">Rechercher</button>
+            </form>
+      </div>
 
 
-
-        <form action="" method="POST">
-            <label for="searchfirstname">Prénom</label> <br>
-            <input type="text" name="searchfirstname" id="searchfirstname">
-
-            <label for="searchlastname">Nom</label> <br>
-            <input type="text" name="searchlastname" id="searchlastname">
-
-            <button id="Rechercher" type="button">Rechercher</button>
-        </form>
     </main>
 
-
-
     <footer>
-
+   <p id="footer"></p>
     </footer>
-    
-    <script type="module" src="js/main.js"></script>
-</body>
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>
